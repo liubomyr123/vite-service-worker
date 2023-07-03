@@ -1,0 +1,27 @@
+.layout {
+    &-container {
+        height: 100vh;
+        max-width: 100%;
+    }
+
+    &-header {
+        height: 10%;
+    }
+
+    &-main {
+        height: 80%;
+    }
+
+    &-footer {
+        height: 10%;
+    }
+}
+
+.header {
+    &-icon {
+        svg {
+            width: 100px;
+            height: auto;
+        }
+    }
+}

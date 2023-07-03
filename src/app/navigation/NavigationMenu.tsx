@@ -1,4 +1,4 @@
-export default function RightMenu() {
+export default function NavigationMenu() {
     return (
         <section>
             <h2>RightMenu</h2>

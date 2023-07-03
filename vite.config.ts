@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from "path";
+import { comlink } from "vite-plugin-comlink";
 
 const publicDir = resolve(__dirname, "./public");
 
@@ -14,7 +15,13 @@ const assetsDir = resolve(sharedDir, "./assets");
 // https://vitejs.dev/config/
 export default defineConfig({
   publicDir,
-  plugins: [react()],
+  plugins: [
+    react(),
+    comlink(),
+  ],
+  worker: {
+    plugins: [comlink()],
+  },
   resolve: {
     alias: {
       "@src": root,
@@ -27,9 +34,12 @@ export default defineConfig({
   // dev new port
   server: {
     port: 3000,
+    headers: {
+      // 'Content-Type': 'application/javascript',
+    },
   },
   // prod new port
   preview: {
     port: 3000
-  }
+  },
 })

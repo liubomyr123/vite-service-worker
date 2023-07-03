@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router";
 import { About, Home, NotFound } from "@src/pages";
 import { Layout } from "./Layout";
 
+import './index.scss';
+
 export const Routing = () => {
   return (
     <Routes>
