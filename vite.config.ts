@@ -34,9 +34,6 @@ export default defineConfig({
   // dev new port
   server: {
     port: 3000,
-    headers: {
-      // 'Content-Type': 'application/javascript',
-    },
   },
   // prod new port
   preview: {

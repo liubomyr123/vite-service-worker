@@ -1,1 +1,1 @@
-export { default as Preloader } from "./Preloader";
+export { useLiveClock } from "./hooks/useLiveClock";

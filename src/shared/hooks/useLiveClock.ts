@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import dayjs from 'dayjs';
 
-const useLiveClock = () => {
+export const useLiveClock = () => {
     const [currentTime, setCurrentTime] = useState(dayjs());
 
     useEffect(() => {
@@ -24,5 +24,3 @@ const useLiveClock = () => {
         ss: currentTime.format('ss'),
     };
 };
-
-export default useLiveClock;
